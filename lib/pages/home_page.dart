@@ -222,7 +222,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Text(
-              'Hipertrofia',
+              'Ejercicios',
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           ],

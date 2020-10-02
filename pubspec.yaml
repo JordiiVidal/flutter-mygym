@@ -14,13 +14,7 @@ dependencies:
 
   cupertino_icons: ^0.1.3
   uuid: ^2.2.2
-  modal_bottom_sheet: 0.2.0
-  http: ^0.12.2
-  curved_navigation_bar: ^0.3.4
-  flutter_statusbarcolor: ^0.2.3
-  line_icons: ^0.2.0
-
-
+  sliding_up_panel: ^1.0.2
 
 
 dev_dependencies:
@@ -30,4 +24,15 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  assets:
+    - assets/images/press_militar.gif
+    - assets/images/elevacion_lateral.gif
+    - assets/images/press_arnold.gif
+    - assets/images/elevaciones_posteriores.jpg
+    - assets/images/encogimiento_hombros.gif
+    - assets/icons/biceps.png
+    - assets/icons/leg.png
+    
+
 

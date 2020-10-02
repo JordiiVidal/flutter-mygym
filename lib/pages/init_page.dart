@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 import 'package:mi_gym/pages/exercices_page.dart';
 import 'package:mi_gym/pages/home_page.dart';
@@ -15,9 +14,9 @@ class _InitPageState extends State<InitPage> {
   int _selectedIndex = 1;
 
   final List<Widget> _widgetOptions = <Widget>[
-    Center(),
-    HomePage(),
     ExercicesPage(),
+    HomePage(),
+    Center(),
   ];
 
   void _onItemTapped(int index) {
@@ -29,29 +28,27 @@ class _InitPageState extends State<InitPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff3f3f3),
+      backgroundColor: Color(0xfffEEEEEE),
+
+      ///Color(0xfff3f3f3),
       body: _widgetOptions.elementAt(_selectedIndex),
-      bottomNavigationBar: CurvedNavigationBar(
-        index: _selectedIndex,
-        backgroundColor: Colors.transparent,
-        items: <Widget>[
-          Icon(
-            Icons.library_books,
-            size: 30,
-            color: Colors.black87,
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            title: Text('Exercices'),
+            icon: Icon(Icons.fitness_center),
           ),
-          Icon(
-            Icons.home,
-            size: 30,
-            color: Colors.black87,
+          BottomNavigationBarItem(
+            title: Text('Home'),
+            icon: Icon(Icons.home),
           ),
-          Icon(
-            Icons.fitness_center,
-            size: 30,
-            color: Colors.black87,
+          BottomNavigationBarItem(
+            title: Text('Profile'),
+            icon: Icon(Icons.person),
           ),
         ],
-        onTap: (index) => _onItemTapped(index),
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
       ),
     );
   }
